@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Glider Antenna Pointer</title>
-    <link rel="stylesheet" href="css/styles.css?2">
-    <script src="scripts/script.js?3" charset="utf-8"></script>
-  </head>
-  <body>
-    <div class="header">
-      <button onclick="requestPerms()" name="locperm" id="locperm">
-        Request Permission Data
-      </button>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glider Antenna Pointer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+  <script defer src="scripts/glider_handler.js" charset="utf-8"></script>
+  <script defer src="scripts/device_handler.js" charset="utf-8"></script>
+  <script defer src="scripts/map.js" charset="utf-8"></script>
+  <script defer src="scripts/angleplotter.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+
+  <div id="header">
+    <button onclick="requestPerms()" name="locperm" id="locperm">
+      Request Permission Data
+    </button>
+    <h3 id="conn_status">Not Connected</h3>
+  </div>
+  <canvas id="myChart" width="150" height="150"></canvas>
+
+  <div class="wrapper flex-row">
+    <div class="phonedata">
+      <h3>Phone Data:</h3>
+      <p id="lat">GPS Data Not Initialized...</p>
+      <p id="long"></p>
+      <p id="alt"></p>
+      <p id="alpha">Motion and Orientation Not Initialized...</p>
+      <p id="beta"></p>
+      <p id="gamma"></p>
     </div>
-    <p id="latlong">Hello World...</p>
-  </body>
+
+    <div class="targetdata">
+      <h3>Target Data:</h3>
+      <p id="glat">...</p>
+      <p id="glong">..</p>
+      <p id="galt">....</p>
+    </div>
+
+    <div class="pointerdata">
+      <h3>Direction to Point</h3>
+      <p id="bearing"></p>
+      <p id="altangle"></p>
+      <p id="diffbearing"></p>
+      <p id="diffaltangle"></p>
+    </div>
+  </div>
+
+
+
+  <img id="mapviz"
+    src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-75.998672&zoom=12&size=400x400&key=AIzaSyConyh4OgmEdYTy7EfLCV2y-v6IK5NTXuc">
+
+
+
+</body>
+
 </html>

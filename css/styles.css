@@ -1,7 +1,47 @@
-.header {
+#header {
   padding: 5px;
   text-align: center;
   background: #1abc9c;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.phonedata {
+  width: 30vw;
+  background-color: #1abc9c;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 3px #000000, 0 0 5px #575757;
+
+}
+
+.targetdata {
+  width: 30vw;
+  background-color: #bc1a60;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 3px #000000, 0 0 5px #575757;
+
+}
+
+.pointerdata {
+  width: 30vw;
+  background-color: #bc711a;
+  border-radius: 10px;
+  padding: 10px;
+  color: #ffffff;
+  text-shadow: 0 0 3px #000000, 0 0 5px #575757;
+
+}
+
+#mapviz {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #333333;
 }
